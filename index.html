@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#1b1718">
+  <meta name="theme-color" content="#171314">
   <title>Мой календарь</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Russo+One&family=Special+Elite&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <div class="shell">
@@ -34,18 +34,19 @@
         <button class="side-link" data-view="month"><span>○</span> Весь месяц</button>
       </nav>
 
-      <div class="punk-label" aria-hidden="true"><span>NO RULES</span><span>JUST PLANS</span></div>
+      <div class="punk-label" aria-hidden="true">
+        <span>NO RULES</span><span>JUST PLANS</span>
+      </div>
     </aside>
 
     <main class="main">
       <div class="edge-art edge-art-cards" aria-hidden="true"></div>
       <div class="edge-art edge-art-lotus" aria-hidden="true"></div>
-      <img class="crow crow-perched" src="assets/crow-collage-cutout.png" alt="" aria-hidden="true">
-      <img class="crow crow-flying" src="assets/crow-flying-cutout.png" alt="" aria-hidden="true">
+      <img class="crow crow-perched" src="./crow-collage-cutout.png" alt="" aria-hidden="true">
+      <img class="crow crow-flying" src="./crow-flying-cutout.png" alt="" aria-hidden="true">
+
       <header class="topbar">
-        <div>
-          <h1 id="pageTitle">Доброе утро!</h1>
-        </div>
+        <h1 id="pageTitle">Доброе утро!</h1>
         <div class="header-actions">
           <div class="view-switch" role="group" aria-label="Вид календаря">
             <button class="view-btn active" data-view="day">День</button>
@@ -61,15 +62,14 @@
           <span class="issue">ISSUE № 07</span>
           <p>Every day<br>is a new page.</p>
         </div>
-        <div class="scrap scrap-portrait" aria-hidden="true"></div>
-        <div class="scrap scrap-collage" aria-hidden="true"></div>
+        <div class="scrap scrap-paper" aria-hidden="true"></div>
         <div class="scrap scrap-zebra" aria-hidden="true"></div>
         <div class="scrap scrap-stickers" aria-hidden="true"></div>
-        <div class="scrap scrap-photos" aria-hidden="true"></div>
-        <div class="scrap scrap-paper" aria-hidden="true"></div>
+        <div class="scrap scrap-portrait" aria-hidden="true"></div>
+        <div class="scrap scrap-collage" aria-hidden="true"></div>
         <div class="punk-stamp" aria-hidden="true">LIVE<br>LOUD</div>
-        <div class="safety-pin pin-one" aria-hidden="true"></div>
-        <span class="tape tape-one"></span><span class="tape tape-two"></span>
+        <span class="tape tape-one" aria-hidden="true"></span>
+        <span class="tape tape-two" aria-hidden="true"></span>
       </section>
 
       <section class="date-nav">
@@ -93,6 +93,7 @@
         </div>
         <textarea id="notes" placeholder="Запишите важную мысль, идею или напоминание…"></textarea>
       </section>
+
       <p class="footer-note">LOVE × MUSIC × DREAMS <span>★</span></p>
     </main>
   </div>
@@ -100,7 +101,7 @@
   <button class="fab" id="addTaskBtn" aria-label="Добавить задачу">＋ <span>Добавить задачу</span></button>
 
   <dialog id="taskDialog">
-    <form id="taskForm" method="dialog">
+    <form id="taskForm">
       <div class="modal-head">
         <div><p class="eyebrow">НОВАЯ ЗАДАЧА</p><h2 id="modalTitle">Запланировать</h2></div>
         <button class="icon-btn close-btn" type="button" id="closeDialog" aria-label="Закрыть">×</button>
@@ -111,7 +112,11 @@
         <label>Дата<input id="taskDate" type="date" required></label>
         <label>Время<select id="taskTime"></select></label>
       </div>
-      <label class="repeat-check"><input id="taskRepeat" type="checkbox"><span class="check-ui"></span><span><strong>Повторять каждый день</strong><small>Задача будет закреплена на это время</small></span></label>
+      <label class="repeat-check">
+        <input id="taskRepeat" type="checkbox">
+        <span class="check-ui"></span>
+        <span><strong>Повторять каждый день</strong><small>Задача будет закреплена на это время</small></span>
+      </label>
       <div class="modal-actions">
         <button class="delete-btn" id="deleteTask" type="button">Удалить</button>
         <button class="cancel-btn" id="cancelDialog" type="button">Отмена</button>
@@ -120,6 +125,6 @@
     </form>
   </dialog>
 
-  <script src="app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
